@@ -112,23 +112,23 @@ public class Room1 extends Room {
     public void fillRoom() {
         roomObjects = new Group();
         
-        Crate crate = new Crate(780, 20, 50, 50);
-        Crate crate2 = new Crate(830, 20, 50, 50);
-        Crate crate3 = new Crate(830, 48, 50, 50);
-        Crate crate4 = new Crate(250, 630, 50, 50);
-        Crate crate5 = new Crate(300, 630, 50, 50);
-        Table table = new Table(400, 300, 200, 100);
+        Crate crate = new Crate(780, 40, 50, 50);
+        Crate crate2 = new Crate(830, 40, 50, 50);
+        Crate crate3 = new Crate(830, 68, 50, 50);
+        Crate crate4 = new Crate(250, 530, 50, 50);
+        Crate crate5 = new Crate(300, 530, 50, 50);
+        Table table = new Table(350, 250, 200, 100);
         Bookcase bookcase = new Bookcase(100, 20, 110, 75);
         Bookcase bookcase2 = new Bookcase(175, 20, 110, 75);
         Bookcase bookcase3 = new Bookcase(250, 20, 110, 75);
         Bookcase bookcase4 = new Bookcase(325, 20, 110, 75);
         Desk desk = new Desk(20, 220, 100, 175);
         DeskChair deskChair = new DeskChair(125, 280, 40, 40);
-        IronBeam ironBeam = new IronBeam(500, 570, 50, 110);
-        IronBeam ironBeam2 = new IronBeam(550, 570, 50, 110);
-        IronBeam ironBeam3 = new IronBeam(600, 570, 50, 110);
+        IronBeam ironBeam = new IronBeam(500, 470, 50, 110);
+        IronBeam ironBeam2 = new IronBeam(550, 470, 50, 110);
+        IronBeam ironBeam3 = new IronBeam(600, 470, 50, 110);
         ComputerDesk computerDesk = new ComputerDesk(600, 20, 100, 75);
-        FloorMat mat = new FloorMat(800, 365, 75, 75);
+        FloorMat mat = new FloorMat(800, 290, 75, 75);
         roomObjects.getChildren().addAll(crate, crate2, crate3, crate4, crate5, table, bookcase, bookcase2, bookcase3, bookcase4, desk, deskChair, ironBeam, ironBeam2, ironBeam3, computerDesk, mat);        
     }
 
