@@ -122,8 +122,8 @@ public class Room1 extends Room {
         Bookcase bookcase2 = new Bookcase(175, 20, 110, 75);
         Bookcase bookcase3 = new Bookcase(250, 20, 110, 75);
         Bookcase bookcase4 = new Bookcase(325, 20, 110, 75);
-        Desk desk = new Desk(20, 250, 100, 175);
-        DeskChair deskChair = new DeskChair(125, 300, 40, 40);
+        Desk desk = new Desk(20, 220, 100, 175);
+        DeskChair deskChair = new DeskChair(125, 280, 40, 40);
         IronBeam ironBeam = new IronBeam(500, 570, 50, 110);
         IronBeam ironBeam2 = new IronBeam(550, 570, 50, 110);
         IronBeam ironBeam3 = new IronBeam(600, 570, 50, 110);

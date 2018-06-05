@@ -30,6 +30,7 @@ public class Room {
 
     Group walls;
     Group doors;
+    Group roomObjects;
     Group root;
     Scene scene;
     Player player;
@@ -42,6 +43,10 @@ public class Room {
     }
 
     public void createDoors() {
+    }
+    
+    public void fillRoom(){
+        
     }
 
     public void spawnPlayer() {
