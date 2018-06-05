@@ -15,6 +15,7 @@ public class Room1 extends Room {
 
         createDoors();
         createWalls();
+        fillRoom();
 
         int enterX = (int) doors.getChildren().get(0).getTranslateX();
         int enterY = (int) doors.getChildren().get(0).getTranslateY();
@@ -27,7 +28,7 @@ public class Room1 extends Room {
 
         player = new Player(spawnX, spawnY, true, getPLAYER_W(), getPLAYER_H());
 
-        root.getChildren().addAll(walls, doors, player);
+        root.getChildren().addAll(walls, doors, roomObjects, player);
 
         scene = new Scene(root, getSCENE_W(), getSCENE_H());
 
@@ -107,4 +108,29 @@ public class Room1 extends Room {
         doors.getChildren().add(door);
     }
 
+    @Override
+    public void fillRoom() {
+        roomObjects = new Group();
+        
+        Crate crate = new Crate(780, 20, 50, 50);
+        Crate crate2 = new Crate(830, 20, 50, 50);
+        Crate crate3 = new Crate(830, 48, 50, 50);
+        Crate crate4 = new Crate(250, 630, 50, 50);
+        Crate crate5 = new Crate(300, 630, 50, 50);
+        Table table = new Table(400, 300, 200, 100);
+        Bookcase bookcase = new Bookcase(100, 20, 110, 75);
+        Bookcase bookcase2 = new Bookcase(175, 20, 110, 75);
+        Bookcase bookcase3 = new Bookcase(250, 20, 110, 75);
+        Bookcase bookcase4 = new Bookcase(325, 20, 110, 75);
+        Desk desk = new Desk(20, 250, 100, 175);
+        DeskChair deskChair = new DeskChair(125, 300, 40, 40);
+        IronBeam ironBeam = new IronBeam(500, 570, 50, 110);
+        IronBeam ironBeam2 = new IronBeam(550, 570, 50, 110);
+        IronBeam ironBeam3 = new IronBeam(600, 570, 50, 110);
+        ComputerDesk computerDesk = new ComputerDesk(600, 20, 100, 75);
+        FloorMat mat = new FloorMat(800, 365, 75, 75);
+        roomObjects.getChildren().addAll(crate, crate2, crate3, crate4, crate5, table, bookcase, bookcase2, bookcase3, bookcase4, desk, deskChair, ironBeam, ironBeam2, ironBeam3, computerDesk, mat);        
+    }
+
+    
 }
