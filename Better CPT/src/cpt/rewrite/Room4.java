@@ -19,7 +19,7 @@ public class Room4 extends Room {
         int enterX = (int) doors.getChildren().get(0).getTranslateX();
         int enterY = (int) doors.getChildren().get(0).getTranslateY();
 
-        Room.setSpawnX(enterX + getDOOR_W());
+        Room.setSpawnX(enterX- getPLAYER_W());
         Room.setSpawnY(enterY + getDOOR_H() / 2 - getPLAYER_H() / 2);
 
         spawnX = Room.getSpawnX();
