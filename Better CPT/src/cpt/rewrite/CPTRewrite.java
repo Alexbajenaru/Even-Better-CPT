@@ -20,10 +20,10 @@ public class CPTRewrite extends Application {
     @Override
     public void start(Stage primaryStage) throws InterruptedException {
 
-//        rooms.add(new Room1());
-//        rooms.add(new Room2());
-//        rooms.add(new Room3());
-//        rooms.add(new Room4());
+        rooms.add(new Room1());
+        rooms.add(new Room2());
+        rooms.add(new Room3());
+        rooms.add(new Room4());
         rooms.add(new Room5());
         rooms.add(new Room6());
         rooms.add(new Room7());
