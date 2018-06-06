@@ -35,6 +35,7 @@ public class Room {
     private ImagePattern ip;
 
     Group walls;
+    Group floor;
     Group doors;
     Group roomObjects;
     Group root;
