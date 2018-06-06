@@ -15,6 +15,7 @@ public class Room2 extends Room {
 
         createDoors();
         createWalls();
+        fillRoom();
 
         int enterX = (int) doors.getChildren().get(0).getTranslateX();
         int enterY = (int) doors.getChildren().get(0).getTranslateY();
@@ -27,7 +28,7 @@ public class Room2 extends Room {
 
         player = new Player(spawnX, spawnY, true, getPLAYER_W(), getPLAYER_H());
 
-        root.getChildren().addAll(walls, doors, player);
+        root.getChildren().addAll(walls, doors, roomObjects, player);
 
         scene = new Scene(root, getSCENE_W(), getSCENE_H());
 
@@ -104,6 +105,34 @@ public class Room2 extends Room {
         door.setTranslateY(getHEADER_H());
         
         doors.getChildren().add(door);
+    }
+    
+    @Override
+    public void fillRoom() {
+        roomObjects = new Group();
+
+        //BigOilDrum bod1 = new BigOilDrum();
+        Crate crate = new Crate(20, 470, 50, 50);
+        Crate crate2 = new Crate(20, 500, 50, 50);
+        Crate crate3 = new Crate(20, 530, 50, 50);
+        Crate crate4 = new Crate(250, 530, 50, 50);
+        Crate crate5 = new Crate(300, 530, 50, 50);
+        OilDrum bod1 = new OilDrum(805, 505, 70, 70, true);
+        OilDrum bod2 = new OilDrum(725, 505, 70, 70, true);
+        OilDrum bod3 = new OilDrum(465, 265, 70, 70, true);
+        OilDrum od1 = new OilDrum(423, 265, 30, 57, false);
+        OilDrum od2 = new OilDrum(383, 265, 30, 57, false);
+        OilDrum od3 = new OilDrum(775, 120, 30, 57, false);
+        OilDrum od4 = new OilDrum(775, 150, 30, 57, false);
+//        Wood wood1 = new Wood(600, 300, 80, 80);
+        Table table = new Table(170, 180, 100, 60);
+        TrashCan trash1 = new TrashCan(857, 300, 20, 25);
+        TrashCan trash2 = new TrashCan(857, 330, 20, 25);
+        TrashCan trash3 = new TrashCan(857, 360, 20, 25);
+        TrashCan trash4 = new TrashCan(857, 270, 20, 25);
+
+        roomObjects.getChildren().addAll(crate, crate2, crate3, crate4, crate5, bod1, bod2, bod3, od1, od2, od3, od4, table, trash1, trash2, trash3, trash4);
+
     }
 
 }
