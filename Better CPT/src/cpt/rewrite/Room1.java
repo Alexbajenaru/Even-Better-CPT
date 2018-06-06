@@ -28,7 +28,7 @@ public class Room1 extends Room {
 
         player = new Player(spawnX, spawnY, true, getPLAYER_W(), getPLAYER_H());
 
-        root.getChildren().addAll(walls, doors, roomObjects, player);
+        root.getChildren().addAll(floor, walls, doors, roomObjects, player);
 
         scene = new Scene(root, getSCENE_W(), getSCENE_H());
 
@@ -85,6 +85,12 @@ public class Room1 extends Room {
         rect.setTranslateY(doorExit.getTranslateY() + getDOOR_H());
 
         walls.getChildren().add(rect);
+        
+        floor = new Group();
+        Rectangle bg  = new Rectangle(0, 50, 900, 550);
+        FloorMat mat = new FloorMat(800, 290, 75, 75);
+        bg.setFill(Color.KHAKI);
+        floor.getChildren().addAll(bg, mat);
     }
 
     @Override
