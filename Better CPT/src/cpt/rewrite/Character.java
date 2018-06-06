@@ -1,5 +1,9 @@
 package cpt.rewrite;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import javafx.scene.image.Image;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 
 public class Character extends Rectangle {
@@ -11,6 +15,8 @@ public class Character extends Rectangle {
     private int speedX, speedY;
 
     private Bullet gun;
+    private Image image = null;
+    private ImagePattern ip;
 
     characterAction action = characterAction.NONE;
 
@@ -26,6 +32,12 @@ public class Character extends Rectangle {
         this.speed = 10;
         this.speedX = 0;
         this.speedY = 0;
+        try {
+            image = new Image(new FileInputStream("src/Sprites/Player_down.png"), 100, 100, true, true);
+        } catch (IOException f) {
+        }
+        ip = new ImagePattern(image);
+        this.setFill(ip);
 
     }
 

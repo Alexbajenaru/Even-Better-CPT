@@ -1,11 +1,15 @@
 package cpt.rewrite;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
@@ -27,6 +31,8 @@ public class Room {
     static int spawnY;
     static Color wallsColor;
     static Color doorColor;
+    private Image image = null;
+    private ImagePattern ip;
 
     Group walls;
     Group doors;
@@ -44,9 +50,9 @@ public class Room {
 
     public void createDoors() {
     }
-    
-    public void fillRoom(){
-        
+
+    public void fillRoom() {
+
     }
 
     public void spawnPlayer() {
@@ -137,15 +143,39 @@ public class Room {
         scene.setOnKeyPressed(e -> {
             switch (e.getCode()) {
                 case LEFT:
+                    try {
+                        image = new Image(new FileInputStream("src/Sprites/Player_left.png"), 100, 100, true, true);
+                    } catch (IOException f) {
+                    }
+                    ip = new ImagePattern(image);
+                    player.setFill(ip);
                     player.setSpeedX(-1 * player.getSpeed());
                     break;
                 case RIGHT:
+                    try {
+                        image = new Image(new FileInputStream("src/Sprites/Player_right.png"), 100, 100, true, true);
+                    } catch (IOException f) {
+                    }
+                    ip = new ImagePattern(image);
+                    player.setFill(ip);
                     player.setSpeedX(player.getSpeed());
                     break;
                 case UP:
+                    try {
+                        image = new Image(new FileInputStream("src/Sprites/Player_up.png"), 100, 100, true, true);
+                    } catch (IOException f) {
+                    }
+                    ip = new ImagePattern(image);
+                    player.setFill(ip);
                     player.setSpeedY(-1 * player.getSpeed());
                     break;
                 case DOWN:
+                    try {
+                        image = new Image(new FileInputStream("src/Sprites/Player_down.png"), 100, 100, true, true);
+                    } catch (IOException f) {
+                    }
+                    ip = new ImagePattern(image);
+                    player.setFill(ip);
                     player.setSpeedY(player.getSpeed());
                     break;
                 default:

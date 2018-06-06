@@ -128,8 +128,7 @@ public class Room1 extends Room {
         IronBeam ironBeam2 = new IronBeam(550, 470, 50, 110);
         IronBeam ironBeam3 = new IronBeam(600, 470, 50, 110);
         ComputerDesk computerDesk = new ComputerDesk(600, 20, 100, 75);
-        FloorMat mat = new FloorMat(800, 290, 75, 75);
-        roomObjects.getChildren().addAll(crate, crate2, crate3, crate4, crate5, table, bookcase, bookcase2, bookcase3, bookcase4, desk, deskChair, ironBeam, ironBeam2, ironBeam3, computerDesk, mat);        
+        roomObjects.getChildren().addAll(crate, crate2, crate3, crate4, crate5, table, bookcase, bookcase2, bookcase3, bookcase4, desk, deskChair, ironBeam, ironBeam2, ironBeam3, computerDesk);        
     }
 
     
